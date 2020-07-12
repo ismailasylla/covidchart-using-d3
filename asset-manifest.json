@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/covidchart-using-d3/static/css/main.5f361e03.chunk.css",
+    "main.js": "/covidchart-using-d3/static/js/main.620908d8.chunk.js",
+    "main.js.map": "/covidchart-using-d3/static/js/main.620908d8.chunk.js.map",
+    "runtime-main.js": "/covidchart-using-d3/static/js/runtime-main.7d9e0c4e.js",
+    "runtime-main.js.map": "/covidchart-using-d3/static/js/runtime-main.7d9e0c4e.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/covidchart-using-d3/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.870a4d29.chunk.js": "/covidchart-using-d3/static/js/2.870a4d29.chunk.js",
+    "static/js/2.870a4d29.chunk.js.map": "/covidchart-using-d3/static/js/2.870a4d29.chunk.js.map",
+    "index.html": "/covidchart-using-d3/index.html",
+    "precache-manifest.7604ee55ee496aad8b045fdd3ff97d41.js": "/covidchart-using-d3/precache-manifest.7604ee55ee496aad8b045fdd3ff97d41.js",
+    "service-worker.js": "/covidchart-using-d3/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/covidchart-using-d3/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "/covidchart-using-d3/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.870a4d29.chunk.js.LICENSE.txt": "/covidchart-using-d3/static/js/2.870a4d29.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d9e0c4e.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.870a4d29.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.620908d8.chunk.js"
+  ]
+}
