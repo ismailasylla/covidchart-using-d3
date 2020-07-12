@@ -38,7 +38,7 @@ const CovidChart: React.FC = () => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const [data, setData] = useState(Countries);
   const [name, setName] = useState('');
-  const [unit, setUnit] = useState('');
+  const [cases, setCases] = useState('');
 
   let x = scaleBand()
     .domain(data.map((d) => d.name))

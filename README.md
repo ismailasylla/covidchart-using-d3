@@ -10,4 +10,6 @@ In the project directory, you can run:
 
 ### `npm start`
 
+Demo Link to the App [Covid-19 - Chart](https://syldox.github.io/covidchart-using-d3).
+
 That's it !
