@@ -6,30 +6,31 @@ import 'd3-transition';
 import { easeElastic } from 'd3-ease';
 import randomstring from 'randomstring';
 
+// Will refactore the component which will allow us to pass the data via props for much cleaner code.
 let Countries = [
   {
     name: 'UAE',
-    units: 32,
+    cases: 32,
   },
   {
     name: 'USA',
-    units: 67,
+    cases: 67,
   },
   {
     name: 'China',
-    units: 81,
+    cases: 81,
   },
   {
     name: 'UK',
-    units: 38,
+    cases: 38,
   },
   {
     name: 'Africa',
-    units: 5,
+    cases: 5,
   },
   {
     name: 'Frace',
-    units: 100,
+    cases: 100,
   },
 ];
 const CovidChart: React.FC = () => {
@@ -45,7 +46,7 @@ const CovidChart: React.FC = () => {
     .padding(0.05);
 
   let y = scaleLinear()
-    .domain([0, max(data, (d) => d.units)!])
+    .domain([0, max(data, (d) => d.cases)!])
     .range([dimensions.height, 0]);
 
   const [selection, setSelection] = useState<null | Selection<
@@ -79,8 +80,8 @@ const CovidChart: React.FC = () => {
         .duration(700)
         .delay((_, i) => i * 100)
         .ease(easeElastic)
-        .attr('height', (d) => dimensions.height - y(d.units))
-        .attr('y', (d) => y(d.units));
+        .attr('height', (d) => dimensions.height - y(d.cases))
+        .attr('y', (d) => y(d.cases));
     }
   }, [selection]);
 
@@ -91,7 +92,7 @@ const CovidChart: React.FC = () => {
         .range([0, dimensions.width])
         .padding(0.05);
       y = scaleLinear()
-        .domain([0, max(data, (d) => d.units)!])
+        .domain([0, max(data, (d) => d.cases)!])
         .range([dimensions.height, 0]);
 
       const rects = selection.selectAll('rect').data(data);
@@ -115,9 +116,9 @@ const CovidChart: React.FC = () => {
         .transition()
         .delay(300)
         .attr('x', (d) => x(d.name)!)
-        .attr('y', (d) => y(d.units))
+        .attr('y', (d) => y(d.cases))
         .attr('width', x.bandwidth)
-        .attr('height', (d) => dimensions.height - y(d.units))
+        .attr('height', (d) => dimensions.height - y(d.cases))
         .attr('fill', 'red');
 
       rects
@@ -131,8 +132,8 @@ const CovidChart: React.FC = () => {
         .delay(400)
         .duration(500)
         .ease(easeElastic)
-        .attr('height', (d) => dimensions.height - y(d.units))
-        .attr('y', (d) => y(d.units))
+        .attr('height', (d) => dimensions.height - y(d.cases))
+        .attr('y', (d) => y(d.cases))
         .attr('fill', 'orange');
     }
   }, [data]);
@@ -143,7 +144,7 @@ const CovidChart: React.FC = () => {
   const addData = () => {
     const dataToAdd = {
       name: randomstring.generate(),
-      units: Math.round(Math.random() * 80 + 20),
+      cases: Math.round(Math.random() * 80 + 20),
     };
     setData([...data, dataToAdd]);
   };
