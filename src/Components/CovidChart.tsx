@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { GoMarkGithub } from 'react-icons/go';
 import { select, Selection } from 'd3-selection';
 import { scaleLinear, scaleBand } from 'd3-scale';
 import { max } from 'd3-array';
@@ -174,6 +175,18 @@ const CovidChart: React.FC = () => {
         >
           Remove Data
         </button>
+      </div>
+      <div className="container mt-5">
+        <h3>
+          Link to the repo -
+          <a
+            href="https://github.com/Syldox/covidchart-using-d3"
+            style={{ textDecoration: 'none' }}
+          >
+            {' '}
+            <GoMarkGithub size={50} />{' '}
+          </a>
+        </h3>
       </div>
     </>
   );
